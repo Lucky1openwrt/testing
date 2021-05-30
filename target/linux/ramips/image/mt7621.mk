@@ -290,7 +290,8 @@ define Device/dlink_dir-8xx-a1
   IMAGES += factory.bin
   IMAGE/sysupgrade.bin := append-kernel | append-rootfs | pad-rootfs | \
 	check-size | append-metadata
-  IMAGE/factory.bin := append-kernel | append-rootfs | check-size
+  IMAGE/factory.bin := append-kernel | append-rootfs | check-size |\
+	dlink-sge-image
 endef
 
 define Device/dlink_dir-8xx-r1

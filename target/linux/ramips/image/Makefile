@@ -145,7 +145,8 @@ define Build/uimage-padhdr
 endef
 
 define Build/uimage-sgehdr
-	uimage_sgehdr -i $@ -o $@.new  -m $(DEVICE_MODEL) -h $(DEVICE_VARIANT) -s V1.00000
+	uimage_sgehdr -i $@ -o $@.new -m $(DEVICE_MODEL) \
+		-h $(DEVICE_VARIANT) -s V1.00000
 	mv $@.new $@
 endef
 
